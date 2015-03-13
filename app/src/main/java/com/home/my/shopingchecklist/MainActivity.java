@@ -1,12 +1,16 @@
 package com.home.my.shopingchecklist;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import java.io.File;
+import java.net.URI;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -22,6 +26,8 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
+                File file = new File("/storage/extSdCard/DCIM/Camera/20131025_173110.jpg");
+                intent.setDataAndType(Uri.fromFile(file),"image/*");
             }
         });
     }
