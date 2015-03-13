@@ -28,6 +28,7 @@ public class MainActivity extends ActionBarActivity {
                 intent.setAction(Intent.ACTION_VIEW);
                 File file = new File("/storage/extSdCard/DCIM/Camera/20131025_173110.jpg");
                 intent.setDataAndType(Uri.fromFile(file),"image/*");
+                startActivity(intent);
             }
         });
     }
