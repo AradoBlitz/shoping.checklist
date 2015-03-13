@@ -1,5 +1,6 @@
 package com.home.my.shopingchecklist;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -19,7 +20,8 @@ public class MainActivity extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
             }
         });
     }
